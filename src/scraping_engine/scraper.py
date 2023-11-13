@@ -8,7 +8,7 @@ from scraping_engine.post_exporter import FacebookPostExporter, InfoFileExporter
 """
 Create a Scraper class responsible for handling the web scraping logic. 
 It will fetch and parse the HTML content of the website to extract Facebook posts and their associated information. 
-It will create instances of the FacebookPost class for each post found.
+It will create instances of the FacebookPost class for each found post.
 """
 class Scraper:
     

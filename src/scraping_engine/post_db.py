@@ -1,8 +1,10 @@
 """
+-----------------------------------DEPRECATED------------------------------
 Create a PostDatabase class responsible for managing the overall database of Facebook posts.
 It will store information about each post, such as the number of likes and the date.
 It stores a facebook post objects that contain their IDs, links, date, text & likes
 It can use the CSVWriter class to store the data in CSV format.
+-----------------------------------DEPRECATED------------------------------
 """
 import psycopg2
 import csv

@@ -4,10 +4,10 @@ from abc import ABC, abstractmethod
 from scraping_engine.file_manager import FileManager
 
 """
-Create a PostWriter class responsible for writing the post text to text files.
+Create a PostExporter class responsible for writing the post text to text files.
 It will take a FacebookPost object as input and write its text to a text file within the corresponding post folder.
-Implemented with a Factory Pattern.
 """
+
 # Configure logging
 log_dir = '../logs'
 os.makedirs(log_dir, exist_ok=True)

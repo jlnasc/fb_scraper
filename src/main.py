@@ -31,7 +31,7 @@ def export_facebook_post(post):
 
 def main():
     print("Facebook Post Scraper")
-
+    
     db_manager = DatabaseManager(host="localhost", dbname="jl", user="jl", password="1234")
     db_repository = DatabaseRepository(db_manager)
     db_service = DatabaseService(db_repository)
@@ -49,9 +49,11 @@ def main():
     for post in all_posts:
 
         fb_post_filtered = scraper.scrape_facebook_post(post)
+        
+        post_count += 1
+        bar.update(post_count)
+        
         if not fb_post_filtered.is_valid():
-            post_count += 1
-            bar.update(post_count)
             continue
         
         fb_post_id = db_service.add_post(fb_post_filtered)
@@ -59,9 +61,6 @@ def main():
         if fb_post_id:
             fb_post_filtered.insert_id(fb_post_id)
             export_facebook_post(fb_post_filtered)
-        
-        post_count += 1
-        bar.update(post_count)
-        
+                
 if __name__ == "__main__":
     main()
