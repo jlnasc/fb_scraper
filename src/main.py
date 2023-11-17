@@ -40,7 +40,7 @@ def main():
     db_service.create_table()
     
     scraper = Scraper(FB_DATA_SOURCE)
-    scraper.load_html_file()
+    scraper.load_html_source()
     all_posts = scraper.get_facebook_posts()
     
     bar = progressbar.ProgressBar(max_value=len(all_posts), redirect_stdout=True)

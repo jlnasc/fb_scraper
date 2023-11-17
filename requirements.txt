@@ -1,0 +1,8 @@
+flask
+pathlib
+psycopg2
+logging
+configparser
+progressbar
+pytest
+python-dotenv

@@ -29,7 +29,7 @@ class Scraper:
         self.POST_LINK_CLASS_ID        = self.config['ScraperConfiguration']['POST_LINK_CLASS_ID']
         self.POST_LIKES_CLASS_ID       = self.config['ScraperConfiguration']['POST_LIKES_CLASS_ID']
         
-    def load_html_file(self):
+    def load_html_source(self):
         try:
             with open(self.html_source_path, encoding="utf8") as html_file:
                 print("Loading the data ...")
